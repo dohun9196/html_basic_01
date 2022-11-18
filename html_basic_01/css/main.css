@@ -1,0 +1,446 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Roboto:wght@900&display=swap');
+@import url('https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css');
+
+body {
+    font-family: 'Roboto', 'Noto Sans KR', sans-serif;
+    color: #444;
+}
+
+.Warp {
+    min-width: 1800px;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 50px;
+    line-height: 80px;
+}
+
+.header:hover {
+    background: #fff;
+    color: #333;
+}
+
+.header h1 {
+    font-size: 0;
+}
+
+.header h1 a {
+    display: inline-block;
+    vertical-align: middle;
+    width: 188px;
+    height: 22px;
+    background: url(../img/logo01.png);
+}
+
+.header:hover h1 a {
+    background: url(../img/logo02.png);
+}
+
+nav>ul {
+    display: flex;
+    gap: 60px;
+}
+
+nav>ul>li {
+    display: block;
+    float: left;
+    font-size: 18px;
+    line-height: 90px;
+    padding: 0 40px;
+
+
+
+}
+
+nav>ul>li a:hover {
+    display: block;
+    color: #018850;
+    border-bottom: 2px solid #018850;
+
+}
+
+.mainSlide .itm {
+    height: 100vh;
+    scroll-behavior: smooth;
+}
+
+.mainSlide .itm01 {
+    background: url(../img/main_01.jpg) no-repeat center center/ cover;
+}
+
+.mainSlide .itm02 {
+    background: url(../img/main_02.jpg) no-repeat center center/ cover;
+}
+
+.mainSlide .itm03 {
+    background: url(../img/main_03.png) no-repeat center center/ cover;
+}
+
+.mainSlide .slick-dots {
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.mainSlide .slick-dots li {
+    display: inline-block;
+    width: 100px;
+    height: 6px;
+    background: #fff;
+    border-radius: 3px;
+    margin: 0 3px;
+    overflow: hidden;
+    position: relative;
+}
+
+.mainSlide .slick-dots li::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #f00;
+}
+
+.mainSlide .slick-dots li.slick-active::after {
+    width: 100%;
+    transition: 2s;
+}
+
+/*.mainSlide .slick-dots li.slick-active {
+    background: #f00;
+}*/
+
+.mainSlide .slick-dots button {
+    display: none;
+}
+
+.mainSlide .itm {
+    position: relative;
+}
+
+.mainSlide .itm p {
+    transform: translate(0, 100px);
+    opacity: 0;
+}
+
+.mainSlide .itm.on p {
+    opacity: 1;
+    transition: 0.5s;
+    transform: translate(0, 0);
+}
+
+.mainSlide .itm span {
+    display: block;
+    opacity: 0;
+    transform: translate(0, 100px);
+}
+
+.mainSlide .itm.on span {
+    transform: 0.5s 0.5s;
+    opacity: 1;
+    transition: 0.5s;
+    transform: translate(0, 0);
+
+}
+
+.mainSlide .slogan {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1200px;
+}
+
+.mainSlide .slogan p {
+    font-size: 40px;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 0 0 1px #000;
+    margin: 0 0 20px 0;
+}
+
+
+.mainSlide .slogan span {
+    font-size: 14px;
+    color: #fff;
+    text-shadow: 0 0 1px #000;
+}
+
+.mainSlide .slick-arrow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    z-index: 999;
+
+    font-size: 0;
+    border: none;
+    background: transparent;
+
+    width: 100px;
+    height: 100px;
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.mainSlide .slick-prev {
+    transform: translate(-50%, -50%) rotate(-45deg);
+    margin: 0 0 0 -700px;
+}
+
+.mainSlide .slick-next {
+    transform: translate(-50%, -50%) rotate(135deg);
+    margin: 0 0 0 700px;
+}
+
+.mainVisual .num {
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    margin: 0 0 0 600px;
+    transform: translate(-100%, 0);
+    color: #fff;
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.mainVisual .right {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: 0 0 0 600px;
+    transform: translate(-100%, -50%);
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+
+    text-align: right;
+}
+
+.mainVisual .right li::after {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #fff;
+    margin: 5px 0 5px 20px;
+    vertical-align: middle;
+}
+
+.mainVisual .right li.on::after {
+    background: #fff;
+}
+
+.mainVisual .right li a {
+    font-size: 0;
+}
+
+
+.mainVisual .right li.on a {
+    font-size: 20px;
+}
+
+.bulid {
+    position: relative;
+    padding: 100px 0;
+    text-align: center;
+
+}
+
+.bulid h2 {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0 0 15 px 0;
+}
+
+.bulid p {
+    font-size: 15px;
+    margin: 0 0 30px 0;
+}
+
+.bulid figure {
+    width: 1200px;
+}
+
+.bulid figure img {
+    margin: 0 auto;
+}
+
+.bulid .arrows button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: none;
+    background: rgba(100, 100, 100, 0.5);
+    width: 100px;
+    height: 100px;
+    font-size: 0;
+}
+
+.bulid .arrows button::before {
+    content: "";
+    position: absolute;
+    top: 35px;
+    left: 20px;
+    right: 20px;
+    height: 1px;
+    background: #fff;
+}
+
+.bulid .arrows button::after {
+    content: "";
+    position: absolute;
+    top: 35px;
+    width: 15px;
+    height: 1px;
+    background: #fff;
+
+}
+
+.bulid .arrows .left::after {
+    left: 20px;
+    transform: rotate(-45deg);
+    transform-origin: left bottom;
+}
+
+.bulid .arrows .right::after {
+    right: 20px;
+    transform: rotate(45deg);
+    transform-origin: right bottom;
+}
+
+.bulid .arrows .left {
+    margin: 0 0 0 -600px;
+}
+
+.bulid .arrows .right {
+    margin: 0 0 0 600px;
+}
+
+.bulid .slick-dots {
+    margin: 50px 0 0 0;
+}
+
+.bulid .slick-dots li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.bulid .slick-dots li button {
+    font-size: 0;
+    width: 20px;
+    height: 20px;
+    background: #ddd;
+    border: none;
+}
+
+.bulid .slick-dots li.slcik-active button {
+    background: #008850;
+}
+
+.bulid .content {
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    width: 300px;
+    height: 400px;
+    background: #fff;
+    border: 1px solid#ddd;
+    margin: 0 0 0 -500px;
+    box-shadow: 10px 20px 20px rgb(100, 100, 100);
+}
+
+.bulid .content::after {
+    content: "";
+    position: absolute;
+    left: -25px;
+    top: 60px;
+    width: 50px;
+    height: 2px;
+    background: #008850;
+
+}
+
+.bulid .port {
+    display: none;
+    padding: 50px 40px 0 40px;
+    text-align: left;
+}
+
+.bulid .port.on {
+    display: block;
+}
+
+.bulid .port .tit {
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0 0 15px 0;
+}
+
+.bulid .port .desc {
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 21px;
+    min-height: 120px;
+    word-break: keep-all;
+}
+
+.bulid .port .num span {
+    font-size: 30px;
+    color: #008850;
+}
+
+.bulid .port a {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #008850;
+    border: 1px solid #008850;
+}
+
+.bulid .num {
+    position: absolute;
+    bottom: 50px;
+    left: 54px;
+}
+
+.bulid .figure {
+    filter: grayscale(1);
+}
+
+.bulid .figure.slick-center {
+    filter: grayscale(0);
+}
+
+.movie {
+    padding: 100px;
+    background: #f9f9f9;
+}
+
+.movie .movieWrap {
+    margin: 0 auto;
+    width: 800px;
+    height: 450px;
+}
+
+.movie .play::after {
+    content: "\ea3b";
+    font-family: xeicon !important;
+}
+
+.movie .play.on::after {
+    content: "\ea3e";
+    font-family: xeicon !important;
+}
